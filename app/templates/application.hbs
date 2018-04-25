@@ -1,10 +1,8 @@
-{{#link-to "hello-world"}}
- Hello World
-{{/link-to}} &nbsp;&nbsp;&nbsp;
-{{#link-to "rentals"}}
-  Rentals
-{{/link-to}}
+{{#bs-nav type="tabs" as |nav|}}
+{{#nav.item}}{{#nav.link-to "hello-world"}}Hello World{{/nav.link-to}}{{/nav.item}}
+  {{#nav.item}}{{#nav.link-to "rentals"}}Rentals{{/nav.link-to}}{{/nav.item}}
+{{/bs-nav}}
 
-<hr/>
+<br/>
 
 {{outlet}}
