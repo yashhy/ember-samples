@@ -5,7 +5,14 @@
     <em>Welcome to Tech Park Rentals</em>
   </h1>
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
-  {{#each model as |rentals|}}
-    {{rental-listing rental=rentals}}
-  {{/each}}
+
+  {{#list-filter
+    filter=(action 'filterByCity')
+    as |filteredResults|}}
+
+    {{#each filteredResults as |rentalUnit|}}
+      {{rental-listing rental=rentalUnit}}
+    {{/each}}
+
+  {{/list-filter}}
 </div>
