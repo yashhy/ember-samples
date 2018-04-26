@@ -9,13 +9,13 @@
       <a style="cursor: pointer;" {{action 'toggleShowHide'}}>more..</a>
     {{else}}
       <div>
-        <span><b>Total Companies :</b></span> {{rental.totalCompanies}}
+        <span><b>Total Companies :</b></span> {{rental-property-categorize rental.totalCompanies}}
         <br/>
         <span><b>Address :</b></span> {{rental.address}}
         <br/>
         <a style="cursor: pointer;" {{action 'toggleShowHide'}}>show less</a>
       </div>
     {{/if}}
-    
+
   </div>
 </article>
